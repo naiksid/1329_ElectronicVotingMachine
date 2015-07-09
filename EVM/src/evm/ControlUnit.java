@@ -4,6 +4,9 @@ import java.util.*;
 
 public interface ControlUnit {
 	
-	ArrayList <Candidate> candidates = new ArrayList<Candidate>();
+	public int ballotbutton();
+	
+	public int addcandidate();
+	
 
 }
