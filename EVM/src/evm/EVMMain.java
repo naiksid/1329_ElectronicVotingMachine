@@ -10,8 +10,12 @@ public class EVMMain {
 		cu.addcandidate();
 		cu.ballotbutton();
 		bu.machineready();
-		bu.castVote();
-		
+		String a = bu.castVote();
+		if(a=="true"){
+			bu.sendoutput(cu);
+			cu.success();
+			//cu.ballotbutton();
+		}
+		cu.totalpoll();	
 	}
-
 }

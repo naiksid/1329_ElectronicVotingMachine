@@ -8,5 +8,12 @@ public interface ControlUnit {
 	
 	public int addcandidate();
 	
+	public void success();
+
+	public void receiveInput(int totalpoll);
+	
+	public void totalpoll();
+	
+	
 
 }

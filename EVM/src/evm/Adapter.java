@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Adapter implements ControlUnit{
 	
+	int totalpoll;
+	
 	ArrayList <Candidate> candidates = new ArrayList<Candidate>();
 	
 	Candidate cd1 = new Candidate("Raj",1,0);
@@ -23,5 +25,20 @@ public class Adapter implements ControlUnit{
 		candidates.add(cd3);
 		System.out.println("Candidates Added Successfully\n");
 		return 0;
+	}
+	
+	public void success(){
+		System.out.println("You have successfully cast your vote");
+	}
+
+	@Override
+	public void receiveInput(int totalpoll) {
+		// TODO Auto-generated method stub
+		this.totalpoll=totalpoll;
+	}
+	
+	public void totalpoll() {
+		// TODO Auto-generated method stub
+		System.out.println("Total Votes cast " + totalpoll);
 	}
 }

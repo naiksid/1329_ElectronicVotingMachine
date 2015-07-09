@@ -12,7 +12,7 @@ public class BallotingUnit {
 	}
 
 	
-	public Boolean castVote(){
+	public String castVote(){
 		Scanner s = new Scanner(System.in);
 		System.out.println("Select the appropriate button to cast the vote\n");
 		System.out.println("Enter 1-Candidate One");
@@ -20,7 +20,15 @@ public class BallotingUnit {
 		System.out.println("Enter 3-Candidate Three");
 		int selectedCandidate = s.nextInt();
 		totalpoll=totalpoll+1;
-		return true;
+		return "true";
 	}
+
+
+	public void sendoutput(ControlUnit cu) {
+		// TODO Auto-generated method stub
+		cu.receiveInput(totalpoll);
+	}
+	
+	
 }
 
