@@ -10,7 +10,7 @@ public class Candidate {
 		super();
 		Name = name;
 		this.candidateID = candidateID;
-		this.myVotersCount = myVotersCount;
+		this.myVotersCount = 0;
 	}
 	
 }
